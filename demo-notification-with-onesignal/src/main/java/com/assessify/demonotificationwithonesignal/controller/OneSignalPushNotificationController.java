@@ -13,8 +13,8 @@ public class OneSignalPushNotificationController {
         PushNotificationOptions.sendMessageToAllUsers(message);
     }
 
-    @PostMapping({"/sendMessageToUser", "/sendMessageToUser/{userId}"})
-    public void sendMessageToUser(@PathVariable(value = "userId", required = false) String userId,
+    @PostMapping("/sendMessageToUser/{userId}")
+    public void sendMessageToUser(@PathVariable String userId,
                                   @RequestBody String message) throws JsonProcessingException {
         PushNotificationOptions.sendMessageToUser(message, userId);
     }

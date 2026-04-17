@@ -11,9 +11,8 @@ import java.util.Map;
 
 public class PushNotificationOptions {
 
-    public static final String REST_API_KEY = "os_v2_app_bcigqvfucvaibk2agm3ai7ssyk4butfak35ejem4nr7lc7s56zwqttd4mj3fkvmu7umyyaflf3d43lwh664f6rydt2tg5phm63ntopa";
+    public static final String REST_API_KEY = "os_v2_app_bcigqvfucvaibk2agm3ai7ssylpc636jmobuos5wahqnar3uohjrugybc73mwxmuvfwj4pemrtkbtfrtwwqc5mz6pngjarg3moy776a";
     public static final String APP_ID = "08906854-b415-4080-ab40-3336047e52c2";
-    public static final String DEFAULT_USER_ID = "39095bb2-a078-4264-b95b-3511d00f641f";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -34,8 +33,7 @@ public class PushNotificationOptions {
         headers.set("Content-Type", "application/json; charset=UTF-8");
         headers.set("Authorization", "Basic " + REST_API_KEY);
 
-        String targetUserId = (userId == null || userId.isBlank()) ? DEFAULT_USER_ID : userId;
-        String strJsonBody = buildJsonBodyForSingleUser(message, targetUserId);
+        String strJsonBody = buildJsonBodyForSingleUser(message, userId);
         HttpEntity<String> request = new HttpEntity<>(strJsonBody, headers);
         restTemplate.postForEntity(url, request, String.class);
     }
