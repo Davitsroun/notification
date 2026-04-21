@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class PushNotificationOptions {
 
-    public static final String REST_API_KEY = "os_v2_app_bcigqvfucvaibk2agm3ai7ssylpc636jmobuos5wahqnar3uohjrugybc73mwxmuvfwj4pemrtkbtfrtwwqc5mz6pngjarg3moy776a";
+    public static final String REST_API_KEY = "os_v2_app_bcigqvfucvaibk2agm3ai7ssyknlleyanb6eaq52hbkwmhelb4qxs5xjgzhpx2livrrhl4h5ewd6m3u6vxikgh3mmludvqbjbdbnuka";
     public static final String APP_ID = "08906854-b415-4080-ab40-3336047e52c2";
     private static final RestTemplate restTemplate = new RestTemplate();
     private static final ObjectMapper objectMapper = new ObjectMapper();
